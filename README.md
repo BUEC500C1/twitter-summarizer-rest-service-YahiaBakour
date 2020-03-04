@@ -14,9 +14,23 @@ ENDPOINT: http://ec2-3-16-114-144.us-east-2.compute.amazonaws.com/
 
 #### To setup server
 
-- Create EC2 Instance
+- Create EC2 Instance (Ubuntu)
 - Setup Apache and Flask server
 - Setup Apache so that it starts Flask server on restart
+
+Add the following to /etc/apache2/sites-enabled/000-default.conf
+```
+	WSGIDaemonProcess videoApp threads=5
+	WSGIScriptAlias / /var/www/html/videoApp/videoApp.wsgi
+
+	<Directory videoApp>
+	    WSGIProcessGroup videoApp
+	    WSGIApplicationGroup %{GLOBAL}
+	    Order deny,allow
+	    Allow from all
+	</Directory>
+```
+
 
 #### To get data from server
 

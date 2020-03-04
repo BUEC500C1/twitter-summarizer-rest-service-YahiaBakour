@@ -1,2 +1,5 @@
 __pycache__/app.cpython-37.pyc
 *pycache*
+source/config.py
+image*
+*.ogg

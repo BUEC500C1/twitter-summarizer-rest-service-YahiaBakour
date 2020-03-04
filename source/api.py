@@ -15,7 +15,7 @@ queueThread.start()
 
 @app.route("/")
 def home():
-    return "Hello"
+    return "I'm alive lmao :D"
 
 
 @app.route('/user')
@@ -26,11 +26,11 @@ def runVideoMaker():
 
     hashCreated = str(random.getrandbits(32))
     addToQueue(hashCreated,twitterName)
-    return {"videoURL" : 'http://127.0.0.1:5000/video/' + hashCreated + '.ogg'}
+    return {"videoURL" : 'http://ec2-3-16-114-144.us-east-2.compute.amazonaws.com/video/' + hashCreated + '.ogg'}
 
 @app.route('/video/<name>')
 def watchVideo(name):
-    if not os.path.isfile(f'{os.getcwd()}/source/static/video_generated/{name}'):
+    if not os.path.isfile(f'/var/www/html/videoApp/source/static/video_generated/{name}'):
         return {"Error" : "Video is still being created, wait a sec, thnx"}
 
     html = f"""
