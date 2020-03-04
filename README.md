@@ -14,14 +14,14 @@ ENDPOINT: http://ec2-3-16-114-144.us-east-2.compute.amazonaws.com/
 
 #### To setup server
 
-```
-python3 app.py
-```
+- Create EC2 Instance
+- Setup Apache and Flask server
+- Setup Apache so that it starts Flask server on restart
 
 #### To get data from server
 
 ```
-curl http://0.0.0.0:8000/user\?twittername\=Reuters
+curl http://ec2-3-16-114-144.us-east-2.compute.amazonaws.com/user\?twittername\=elonmusk
 ```
 
 ## Background Info
