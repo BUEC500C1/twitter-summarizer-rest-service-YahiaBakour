@@ -10,6 +10,8 @@ BUID: U37575373
 
 ## Getting Started
 
+ENDPOINT: http://ec2-3-16-114-144.us-east-2.compute.amazonaws.com/
+
 #### To setup server
 
 ```
