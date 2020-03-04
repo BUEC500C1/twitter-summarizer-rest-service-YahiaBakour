@@ -14,7 +14,6 @@ configobj==5.0.6
 constantly==15.1.0
 cryptography==2.1.4
 docutils==0.15.2
-ec2-hibinit-agent==1.0.0
 Flask==1.1.1
 Flask-RESTful==0.3.7
 google-api-core==1.16.0
