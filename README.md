@@ -38,6 +38,12 @@ Add the following to /etc/apache2/sites-enabled/000-default.conf
 curl http://ec2-3-16-114-144.us-east-2.compute.amazonaws.com/user\?twittername\=elonmusk
 ```
 
+or just visit this link on your browser
+
+```
+http://ec2-3-16-114-144.us-east-2.compute.amazonaws.com/user?twittername=elonmusk
+```
+
 ## Background Info
 - When the /user endpoint is hit, i produce a hash to identify the end video created and immediately return it, in the meantime i spawn a thread that goes to work and creates the images then video
 - All images are created in parallel with as many threads as needed 
